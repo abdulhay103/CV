@@ -195,3 +195,12 @@ $sidebar_section_padding: 15px;
     }
   }
 }
+
+.references {
+  @extend %cv_main_content_layout;
+  h2 {
+    i {
+      @extend %icon;
+    }
+  }
+}
