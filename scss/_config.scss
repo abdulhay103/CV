@@ -1,12 +1,14 @@
 /* 12 column setup */
-$cv_background_color: #fff;
-// $cv_background_color: #156aa6;
+$cv_background_color: #f1f1f1;
+// $primary_color: #156aa6;
+$primary_color: #ff5733;
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  letter-spacing: 1.1px;
   margin: 0;
   padding: 0;
   background-color: $cv_background_color;
@@ -27,10 +29,15 @@ a {
 }
 
 ul {
+  padding: 15px 0;
   li {
     list-style-type: none;
     padding-bottom: 10px;
-    font-size: 20px;
     font-weight: 600;
   }
+}
+
+hr {
+  color: $primary_color;
+  border-top: 1px dashed $primary_color;
 }

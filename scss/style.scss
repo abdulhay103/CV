@@ -1,11 +1,27 @@
 @import "config";
 @import "utilities";
 
+// $primary_color: #156aa6;
+$primary_color: #ff5733;
+$sidebar_section_padding: 15px;
+
+%icon {
+  padding-right: 15px;
+  color: $primary_color;
+}
+
+%progress {
+  height: 5px;
+  margin: 5px 0;
+  background-color: $primary_color;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
 .sidebar {
   width: 95%;
   margin: 10px auto;
-  padding: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 
   .imageHolder {
     position: relative;
@@ -15,9 +31,125 @@
     h2 {
       position: absolute;
       right: 20px;
-      bottom: 0;
-      color: #fff;
+      bottom: 15px;
+      color: $primary_color;
       font-size: 700;
+    }
+  }
+  ul {
+    padding: 0 $sidebar_section_padding $sidebar_section_padding
+      $sidebar_section_padding;
+    li {
+      i {
+        @extend %icon;
+      }
+    }
+  }
+
+  .bio {
+    padding: 0 $sidebar_section_padding $sidebar_section_padding
+      $sidebar_section_padding;
+    h2 {
+      i {
+        @extend %icon;
+      }
+    }
+    p {
+      padding: 15px 0;
+    }
+  }
+
+  .proficiency {
+    padding: 0 $sidebar_section_padding $sidebar_section_padding
+      $sidebar_section_padding;
+    h2 {
+      i {
+        @extend %icon;
+      }
+    }
+
+    .progressBar {
+      width: 100%;
+
+      .JavaScript {
+        @extend %progress;
+        width: 85%;
+      }
+
+      .NodeJS {
+        @extend %progress;
+        width: 70%;
+      }
+      .ReactJS {
+        @extend %progress;
+        width: 90%;
+      }
+
+      .WordPress {
+        @extend %progress;
+        width: 80%;
+      }
+
+      .HTML5 {
+        @extend %progress;
+        width: 95%;
+      }
+
+      .CSS3 {
+        @extend %progress;
+        width: 75%;
+      }
+    }
+  }
+
+  .language {
+    padding: 0 $sidebar_section_padding $sidebar_section_padding
+      $sidebar_section_padding;
+    h2 {
+      i {
+        @extend %icon;
+      }
+    }
+    .progressBar {
+      width: 100%;
+
+      .english {
+        @extend %progress;
+        width: 75%;
+      }
+      .bangla {
+        @extend %progress;
+        width: 95%;
+      }
+      .hindi {
+        @extend %progress;
+        width: 70%;
+      }
+    }
+  }
+}
+
+.main_content {
+  width: 98%;
+  margin: 10px auto;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  h2 {
+    padding: $sidebar_section_padding;
+    i {
+      @extend %icon;
+    }
+  }
+  .workes {
+    padding: 0 $sidebar_section_padding $sidebar_section_padding
+      $sidebar_section_padding;
+    h3 {
+      padding: $sidebar_section_padding;
+    }
+    p {
+      padding: 0 $sidebar_section_padding;
+      i {
+        @extend %icon;
+      }
     }
   }
 }
