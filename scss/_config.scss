@@ -1,0 +1,36 @@
+/* 12 column setup */
+$cv_background_color: #fff;
+// $cv_background_color: #156aa6;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $cv_background_color;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  li {
+    list-style-type: none;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

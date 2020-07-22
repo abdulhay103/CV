@@ -1,0 +1,23 @@
+@import "config";
+@import "utilities";
+
+.sidebar {
+  width: 95%;
+  margin: 10px auto;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  .imageHolder {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    h2 {
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+      color: #fff;
+      font-size: 700;
+    }
+  }
+}
