@@ -18,7 +18,12 @@ $sidebar_section_padding: 15px;
   margin-bottom: 15px;
 }
 
+.first_child {
+  padding-top: $sidebar_section_padding;
+}
+
 .sidebar {
+  background-color: #fff;
   width: 95%;
   margin: 10px auto;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
@@ -129,27 +134,64 @@ $sidebar_section_padding: 15px;
   }
 }
 
-.main_content {
+// Design For CV Main Content
+%cv_main_content_layout {
+  background-color: #fff;
   width: 98%;
+  padding: $sidebar_section_padding;
   margin: 10px auto;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.working_experience {
+  @extend %cv_main_content_layout;
   h2 {
-    padding: $sidebar_section_padding;
     i {
       @extend %icon;
     }
   }
-  .workes {
-    padding: 0 $sidebar_section_padding $sidebar_section_padding
-      $sidebar_section_padding;
+  .working_place {
     h3 {
-      padding: $sidebar_section_padding;
+      padding: $sidebar_section_padding 0;
     }
     p {
-      padding: 0 $sidebar_section_padding;
+      padding: 0 0 10px $sidebar_section_padding;
       i {
         @extend %icon;
       }
+    }
+  }
+}
+
+.education {
+  @extend %cv_main_content_layout;
+
+  h2 {
+    i {
+      @extend %icon;
+    }
+  }
+  .institute {
+    padding-bottom: $sidebar_section_padding;
+  }
+}
+
+.training {
+  @extend %cv_main_content_layout;
+  h2 {
+    i {
+      @extend %icon;
+    }
+  }
+  .institute {
+    padding-bottom: $sidebar_section_padding;
+  }
+}
+
+.personal_details {
+  @extend %cv_main_content_layout;
+  h2 {
+    i {
+      @extend %icon;
     }
   }
 }
